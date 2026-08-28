@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Finlytics</title>
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="Finlytics app icon">
+      <span>Finlytics</span>
+    </a>
+  </header>
+  <main class="legal">
+    <a class="back" href="index.html">&larr; Back to Finlytics</a>
+<h1>Privacy Policy — Finlytics</h1>
+<p>Last updated: 28 August 2026</p>
+<p>Finlytics is a shared household expense ledger. This policy explains what the app collects, why, who else sees it, and what you can do about it. It was generated from the app&#x27;s own source code, so it describes what Finlytics actually does rather than what a template assumes.</p>
+<p>Finlytics is published by <strong>Arslan Aziz</strong>, an individual developer based in <strong>Pakistan</strong> (&quot;we&quot;, &quot;us&quot;, &quot;the app&quot;).</p>
+<h2>1. Data we collect</h2>
+<table><thead><tr><th>Category</th><th>Source</th><th>Why we collect it</th></tr></thead><tbody>
+<tr><td>Email address</td><td>Google Sign-In, stored by Supabase Auth</td><td>Identifies your account, lets other members of your household see who logged an entry, and restores your purchases on a new device</td></tr>
+<tr><td>Name and profile photo</td><td>Google Sign-In</td><td>Shown beside the transactions you log, so a household can tell who paid</td></tr>
+<tr><td>Authentication tokens</td><td>Supabase Auth</td><td>Keeps you signed in between sessions</td></tr>
+<tr><td>Your household&#x27;s financial records — accounts, balances, transaction amounts, categories, notes, dates, and which member paid</td><td>Typed by you and the other members of your household</td><td>This is the app&#x27;s entire purpose</td></tr>
+<tr><td>Purchase history</td><td>RevenueCat and Google Play Billing</td><td>Unlocks premium features and restores them on a new device</td></tr>
+<tr><td>App events, device identifiers, and approximate location derived from your IP address</td><td>PostHog, Firebase Analytics</td><td>Understanding which features are used, so the app can be improved. <strong>You can turn this off</strong> — see section 4</td></tr>
+<tr><td>Crash logs and device diagnostics</td><td>Firebase Crashlytics</td><td>Diagnosing and fixing crashes</td></tr>
+<tr><td>Push notification token</td><td>Firebase Cloud Messaging</td><td>Delivering the notifications you have enabled</td></tr>
+</tbody></table>
+<p>We do <strong>not</strong> collect your bank credentials, and Finlytics does not connect to any bank. There is no account linking and no transaction scraping. Every figure in the app is one you typed.</p>
+<p>The app does not request access to your camera, microphone, location services, contacts, calendar, photos or files. Those permissions are not declared in the app at all.</p>
+<h2>2. How we use your data</h2>
+<ul>
+<li>To run the shared ledger: storing what your household logs and showing it to that household.</li>
+<li>To identify you to the other members of your household, and to keep you signed in.</li>
+<li>To unlock and restore premium features you have paid for.</li>
+<li>To understand which features get used, so development effort goes to the right places.</li>
+<li>To diagnose crashes and errors.</li>
+<li>To send notifications you have switched on.</li>
+</ul>
+<p>We do not use your data for advertising, we do not build advertising profiles, and we do not sell your personal data to anyone.</p>
+<h2>3. Sharing</h2>
+<p>We do not sell your personal data. The third-party services below process data on our behalf as service providers, under their own privacy policies:</p>
+<ul>
+<li><strong>Supabase</strong> (Supabase Inc.) — authentication and the ledger database — <a href="https://supabase.com/privacy">https://supabase.com/privacy</a></li>
+<li><strong>Google Sign-In and Google Play Billing</strong> (Google LLC) — <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+<li><strong>RevenueCat</strong> (RevenueCat Inc.) — subscription management. Your account identifier **and your email address** are sent to RevenueCat so purchases can be restored and support requests matched to an account — <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a></li>
+<li><strong>PostHog</strong> (PostHog Inc.) — product analytics — <a href="https://posthog.com/privacy">https://posthog.com/privacy</a></li>
+<li><strong>Firebase Analytics, Crashlytics and Cloud Messaging</strong> (Google LLC) — <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+</ul>
+<p><strong>Everyone in your household sees your ledger.</strong> This is the point of the app, but it is worth stating plainly: when you join or are invited into a household, every other member of that household can see the transactions you log, the accounts you hold, their balances, your display name and your email address. Members cannot spend from an account they do not own — that is enforced by the database, not just the app — but they can see it. Do not join a household with people you would not show your finances to.</p>
+<h2>4. Your rights and choices</h2>
+<p>You can:</p>
+<ul>
+<li><strong>Delete your account and its data</strong> in the app: <strong>Settings → Account → Delete account</strong>. You can also request deletion by emailing us. Data is fully purged within <strong>30 days</strong> of deletion.</li>
+<li><strong>Turn analytics off</strong> in the app: <strong>Settings → Privacy → Share usage analytics</strong>. Crash reports are still sent, because an app that cannot report its own crashes cannot be fixed.</li>
+<li><strong>Request a copy of your data</strong> by emailing <strong>app.finlytics@gmail.com</strong>.</li>
+<li><strong>Lock the app</strong> behind your device&#x27;s fingerprint or face unlock: **Settings → Security → Biometric lock**. This is off unless you turn it on.</li>
+</ul>
+<h2>5. Security</h2>
+<ul>
+<li>All traffic between the app and our servers uses HTTPS/TLS.</li>
+<li>The ledger database enforces row-level security: a query can only return rows belonging to a household you are a member of. This is enforced by the database itself, so it holds even if the app is modified.</li>
+<li>Money can only leave an account you own. This is enforced server-side by a database trigger, not only in the app.</li>
+<li>Any secret held on your device is encrypted with AES-256/GCM, with the key material stored in the Android Keystore and never leaving it.</li>
+<li>No security is absolute, and we cannot guarantee that a determined attacker will never succeed.</li>
+</ul>
+<h2>6. Children</h2>
+<p>Finlytics is not directed at children under 13, and we do not knowingly collect data from them. If you believe a child has provided us with personal data, email us and we will delete it.</p>
+<h2>7. International transfers and GDPR (EEA and UK users)</h2>
+<p>Our database is hosted in <strong>Tokyo, Japan</strong> (AWS <code>ap-northeast-1</code>). If you use Finlytics from the European Economic Area or the United Kingdom, your data is transferred outside your region. Japan is covered by an <strong>adequacy decision</strong> of the European Commission, meaning it is recognised as providing an equivalent level of protection.</p>
+<p>Our lawful bases for processing are:</p>
+<ul>
+<li><strong>Performance of a contract</strong> — your account, your household&#x27;s ledger and your subscription. The app cannot function without these.</li>
+<li><strong>Consent</strong> — product analytics, which you can withdraw at any time in Settings without losing any functionality.</li>
+<li><strong>Legitimate interests</strong> — crash diagnostics, and keeping the service secure and working.</li>
+</ul>
+<p>You have the right to access, rectify, erase, restrict, port and object to the processing of your personal data, and to lodge a complaint with your local supervisory authority. Exercise any of these by emailing <strong>app.finlytics@gmail.com</strong>.</p>
+<h2>8. California residents (CCPA/CPRA)</h2>
+<p>In the past twelve months we have collected these categories of personal information: identifiers (email address, name, device identifiers), commercial information (purchase history), internet activity (app events), geolocation (approximate, derived from IP), and financial information you enter into your own ledger.</p>
+<p><strong>We do not sell your personal information, and we do not share it for cross-context behavioural advertising.</strong> You have the right to know what we collect, to delete it, to correct it, and not to be discriminated against for exercising those rights. Email <strong>app.finlytics@gmail.com</strong>, or delete your account in the app.</p>
+<h2>9. Changes to this policy</h2>
+<p>We will update this page when our practices change, and the &quot;Last updated&quot; date above will change with it. Material changes will be announced in the app.</p>
+<h2>10. Contact</h2>
+<p>Privacy questions: <strong>app.finlytics@gmail.com</strong></p>
+<p>Arslan Aziz, Pakistan.</p>
+  </main>
+  <footer class="site">
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms of service</a>
+    <p>&copy; 2026 Arslan Aziz</p>
+  </footer>
+</div>
+</body>
+</html>

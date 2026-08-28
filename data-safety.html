@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data safety — Finlytics</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="Finlytics app icon">
+      <span>Finlytics</span>
+    </a>
+  </header>
+  <main class="legal">
+    <a class="back" href="index.html">&larr; Back to Finlytics</a>
+<h1>Play Data Safety — Finlytics</h1>
+<p>(Generated 28 August 2026. Re-run /kit-generate-legal after toggling SDKs.)</p>
+<h2>Data collection and security</h2>
+<ul>
+<li><strong>Does your app collect or share any of the required user data types?</strong> Yes</li>
+<li><strong>Is all of the user data collected by your app encrypted in transit?</strong> Yes</li>
+<li><strong>Do you provide a way for users to request that their data is deleted?</strong> Yes — in-app via Settings → Account → Delete account, plus by emailing app.finlytics@gmail.com. Purged within 30 days.</li>
+<li><strong>Data deletion URL:</strong> <a href="https://arslanazizdo.github.io/finlytics-landing/privacy.html">https://arslanazizdo.github.io/finlytics-landing/privacy.html</a></li>
+<li><strong>Account creation method:</strong> OAuth</li>
+</ul>
+<h2>Data types collected</h2>
+<p>Two per-type questions confuse people — answer them for this kit as:</p>
+<ul>
+<li><strong>Processed ephemerally?</strong> → <strong>No</strong> for everything here. Finlytics stores its data: auth in Supabase, the ledger in Postgres and Room, events in PostHog and Firebase.</li>
+<li><strong>Required, or users choose?</strong> → <strong>Users can choose</strong> only where a real in-app opt-out exists (Settings → Privacy → Share usage analytics). Everything else is required for the app to work.</li>
+</ul>
+<p>Nothing is marked <code>Shared</code>. Play defines sharing as transfer to a third party that uses the data <strong>for its own purposes</strong>, and explicitly excludes a service provider processing on our behalf. Supabase, Firebase, PostHog and RevenueCat are all service providers here. There is no ad network, attribution SDK or data broker in this app.</p>
+<table><thead><tr><th>Data type</th><th>Collected</th><th>Processed ephemerally</th><th>Required, or users choose</th><th>Shared</th><th>Purpose</th><th>Source</th></tr></thead><tbody>
+<tr><td>Personal info / Email address</td><td>Yes</td><td>No</td><td>Data collection is required</td><td>No</td><td>Account management</td><td>Supabase Auth, Google Sign-In, RevenueCat</td></tr>
+<tr><td>Personal info / Name</td><td>Yes</td><td>No</td><td>Data collection is required</td><td>No</td><td>Account management</td><td>Google Sign-In</td></tr>
+<tr><td>Photos and videos / Photos</td><td>Yes</td><td>No</td><td>Data collection is required</td><td>No</td><td>Account management</td><td>Google Sign-In profile picture</td></tr>
+<tr><td>Financial info / Purchase history</td><td>Yes</td><td>No</td><td>Data collection is required</td><td>No</td><td>App functionality</td><td>RevenueCat, Google Play Billing</td></tr>
+<tr><td>Financial info / Other financial info</td><td>Yes</td><td>No</td><td>Data collection is required</td><td>No</td><td>App functionality</td><td>The household ledger the user types — amounts, balances, income</td></tr>
+<tr><td>App activity / App interactions</td><td>Yes</td><td>No</td><td>Users can choose whether this data is collected</td><td>No</td><td>Analytics</td><td>PostHog, Firebase Analytics</td></tr>
+<tr><td>App info and performance / Crash logs</td><td>Yes</td><td>No</td><td>Data collection is required</td><td>No</td><td>App functionality</td><td>Firebase Crashlytics</td></tr>
+<tr><td>App info and performance / Diagnostics</td><td>Yes</td><td>No</td><td>Data collection is required</td><td>No</td><td>App functionality</td><td>Firebase Crashlytics, Firebase Analytics</td></tr>
+<tr><td>Device or other IDs / Device or other IDs</td><td>Yes</td><td>No</td><td>Data collection is required</td><td>No</td><td>App functionality; Analytics</td><td>PostHog, Firebase Analytics, Firebase Cloud Messaging token</td></tr>
+<tr><td>Location / Approximate location</td><td>Yes</td><td>No</td><td>Users can choose whether this data is collected</td><td>No</td><td>Analytics</td><td>PostHog, derived from IP address</td></tr>
+</tbody></table>
+  </main>
+  <footer class="site">
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms of service</a>
+    <p>&copy; 2026 Arslan Aziz</p>
+  </footer>
+</div>
+</body>
+</html>
